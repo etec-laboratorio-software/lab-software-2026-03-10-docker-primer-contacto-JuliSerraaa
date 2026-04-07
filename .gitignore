@@ -1,0 +1,12 @@
+# Dependencias de Node
+node_modules/
+npm-debug.log*
+
+# Variables de Entorno
+.env
+
+# Archivos del SO
+.DS_Store
+
+# Datos del backend montados mediante volumen
+Backend/data/

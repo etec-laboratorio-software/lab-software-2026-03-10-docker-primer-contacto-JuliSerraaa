@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./Backend/data:/usr/src/app/data
+    restart: unless-stopped
+    # El backend no expone puertos al exterior.
+    # Solo será accesible para los demás contenedores mediante el nombre de servicio "backend".
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
