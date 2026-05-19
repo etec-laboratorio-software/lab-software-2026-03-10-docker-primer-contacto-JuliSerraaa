@@ -36,6 +36,11 @@ Desde la **raíz del proyecto** (donde está `docker-compose.yml`):
 # Construir e iniciar los contenedores
 docker-compose up --build
 ```
+En caso de que no funcione eso podras probar también:
+
+```bash
+docker compose up --build
+```
 
 ✅ Verás algo como:
 ```
