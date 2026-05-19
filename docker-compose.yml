@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./Backend/data:/usr/src/app/data
+    environment:
+      - JWT_SECRET
     restart: unless-stopped
     # El backend no expone puertos al exterior.
     # Solo será accesible para los demás contenedores mediante el nombre de servicio "backend".

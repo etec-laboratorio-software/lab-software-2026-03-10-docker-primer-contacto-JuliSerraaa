@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const JWT_SECRET = process.env.JWT_SECRET; // Usamos la variable de entorno
+const JWT_SECRET = process.env.JWT_SECRET || 'secretkey_default_12345'; // Usamos la variable de entorno o un fallback por defecto
 
 // --- REGISTER (REGISTRO DE USUARIO) ---
 export const register = async (req, res) => {

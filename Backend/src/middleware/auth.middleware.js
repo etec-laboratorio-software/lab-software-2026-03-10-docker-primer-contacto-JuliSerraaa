@@ -5,7 +5,7 @@ import User from '../models/user.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET || 'secretkey_default_12345';
 
 export const protect = async (req, res, next) => {
   let token;
