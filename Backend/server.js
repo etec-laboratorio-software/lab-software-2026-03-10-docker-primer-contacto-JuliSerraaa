@@ -33,13 +33,14 @@ async function syncDatabase() {
 async function startServer() {
 
   // 1. Probar la conexión
-  await connectDB(); 
-  
+  await connectDB();
+
   // 2. Sincronizar (Crea la DB y las tablas si no existen)
-  await syncDatabase(); 
+  await syncDatabase();
 
   app.listen(PORT, () => {
-    console.log(`Servidor Express corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor Express corriendo internamente en el puerto ${PORT}`);
+    console.log(`Accede a la aplicación web en: http://localhost`);
   });
 }
 
